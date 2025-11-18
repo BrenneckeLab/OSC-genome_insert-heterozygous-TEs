@@ -1,0 +1,34 @@
+#preload all aliases
+#set -a to automatically export all functions
+set -a
+
+NanoPlot() { singularity exec ${SINGULARITYdir}MARVEL.app NanoPlot "$@" ; }
+filtlong(){ singularity exec ${SINGULARITYdir}MARVEL.app filtlong "$@" ; }
+parallel(){ singularity exec ${SINGULARITYdir}MARVEL.app parallel "$@" ; }
+
+#tools in sniffles
+ngmlr() { singularity exec ${SINGULARITYdir}sniffles.app ngmlr "$@" ; }
+sniffles() { singularity exec ${SINGULARITYdir}sniffles.app sniffles "$@" ; }
+
+Rscript() { singularity exec ${SINGULARITYdir}R.app Rscript "$@" ; }
+seqkit() { singularity exec ${SINGULARITYdir}basicTools.app seqkit "$@" ; }
+mawk() { singularity exec ${SINGULARITYdir}basicTools.app mawk "$@" ; }
+samtools() { singularity exec ${SINGULARITYdir}basicTools.app samtools "$@" ; }
+bcftools() { singularity exec ${SINGULARITYdir}basicTools.app bcftools "$@" ; }
+bgzip() { singularity exec ${SINGULARITYdir}basicTools.app bgzip "$@" ; }
+bedGraphToBigWig() { singularity exec ${SINGULARITYdir}basicTools.app bedGraphToBigWig "$@" ; }
+bedToBigBed() { singularity exec ${SINGULARITYdir}basicTools.app bedToBigBed "$@" ; }
+liftOver() { singularity exec ${SINGULARITYdir}basicTools.app liftOver "$@" ; }
+bedtools() { singularity exec ${SINGULARITYdir}basicTools.app bedtools "$@" ; }
+minimap2() { singularity exec ${SINGULARITYdir}minimap2.app minimap2 "$@" ; }
+TGS-GapCloser() { singularity exec ${SINGULARITYdir}TGS-GapCloser.app /install/TGS-GapCloser/TGS-GapCloser.sh "$@"; }
+flye() { singularity exec ${SINGULARITYdir}flye.app flye "$@" ; }
+wtdbg2() { singularity exec ${SINGULARITYdir}wtdbg2.app wtdbg2 "$@" ; }
+wtpoa() { singularity exec ${SINGULARITYdir}wtdbg2.app wtpoa-cns "$@" ; }
+racon() { singularity exec ${SINGULARITYdir}racon.app racon "$@" ; }
+rmsk2bed() { singularity exec ${SINGULARITYdir}basicTools.app rmsk2bed "$@" ; }
+
+RepeatMasker() { singularity exec ${SINGULARITYdir}repeatmasker.app RepeatMasker "$@"; }
+
+whatshap() { singularity exec ${SINGULARITYdir}whatshap.app whatshap "$@"; }
+set +a
